@@ -12,3 +12,154 @@
   
 }
 
+
+
+#name {
+  color: rgb(222, 222, 222);
+  font-family: 'Roboto', sans-serif;
+  font-size: 100px;
+  margin-left: 20vh;
+  margin-top: 5vh;
+  text-align: left;
+
+}
+
+#title {
+  margin-left: 60vh;
+  color: rgb(222, 222, 222);
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  margin-top: 5vh;
+  
+}
+
+#hook {
+  color: rgb(222, 222, 222);
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  width: 70vh;
+  margin-left: 40vh;
+  margin-top: 7vh;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+#linksContainer a {
+  
+  align-items: center;
+  width: 100%;  
+  padding: 0 10px; 
+  margin-top: 5vh;
+  color: rgb(222, 222, 222);
+  font-family: 'Roboto', sans-serif;
+  font-size: xx-large;
+}
+
+#linksContainer a,
+#linksContainer a:hover,
+#linksContainer a:visited,
+#linksContainer a:active {
+  text-decoration: none;
+}
+
+#port {
+  color: rgb(222, 222, 222);
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  margin: 5vh;
+}
+
+#name {
+  font-size: 8em;
+  
+}
+
+span {
+  display:inline-block;
+  padding: 2.5vh;
+  margin: 0 -20px 0 -4px;
+  user-select: none !important;
+  transition:0.4s;
+}
+
+span.space {
+  padding: 0 10px !important;
+  margin:0 20px;
+}
+
+span.letter:nth-child(even):hover {
+  filter: blur(10px);
+  transform: rotate(90deg);
+ 
+}
+
+span.letter:nth-child(odd):hover {
+  filter: blur(10px);
+  transform: rotate(-90deg);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  #name {
+      font-size: 50px;
+      margin-left: 10vh;
+      margin-top: 7vh;
+  }
+
+  #title {
+      margin-left: 40vh;
+      font-size: 30px;
+  }
+
+  #hook {
+      font-size: 20px;
+      width: 60vh;
+      margin-left: 15vh;
+  }
+
+  #links {
+      font-size: large;
+  }
+
+  #linksContainer {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+  }
+}
+
+
+#linksContainer a {
+  position: relative;
+  overflow: hidden; /* Hide the pseudo-element initially */
+  transition: color 0.3s; /* Optional: Transition for color changes */
+}
+
+#linksContainer a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%; /* Start with the underline hidden */
+  height: 2px;
+  background-color: rgb(222, 222, 222); /* Color of the underline, adjust as needed */
+  transition: right 0.3s;
+}
+
+#linksContainer a:hover::after {
+  right: 0; /* Show the underline on hover */
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
